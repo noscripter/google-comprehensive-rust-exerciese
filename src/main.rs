@@ -12,4 +12,25 @@ fn main() { // fn => function; main => entry point of the whole program
         print!(" => {x}");
     }
     println!();
+    //Basic syntax: scalar types
+    let i8: i8 = 10;
+    println!("i8= {i8}");
+    let test: f32 = 2_f32;
+    println!("test = {test}");
+    let str: &str = "foo";
+    println!("str = {str}");
+    let s: &str = "🤣";
+    println!("s = {s}");
+    let c: char = '∞';
+    println!("c = {c}");
+    let f: bool = false;
+    println!("f = {f}");
+    let t: bool = true;
+    println!("t = {t}");
+
+    // below codes showcasing the usage of raw strings
+    println!(r"\n"); // print \n in the raw form instead of a line feed
+    println!(r#"<a href="link.html">link</a>"#); // use equal amount of # on either side of the
+                                                 // quotes for raw strings
+    println!("<a href=\"link.html\">link</a>");
 }
