@@ -161,7 +161,9 @@ fn fizzbuzz(n: u32) -> String {
     format!("{fizz}{buzz}")
 }
 
+// unit type(`()`) is returned
 fn print_fizzbuzz_to(n: u32) {
+    // =n includes the upper bound
     for i in 1..=n {
         println!("{}", fizzbuzz(i));
     }
