@@ -154,6 +154,9 @@ fn main() { // fn => function; main => entry point of the whole program
 
     let rect3 = Rectangle::square(9);
     println!("area of square created rectangel: {}", rect3.area());
+
+    println!("coin toss: {}", pick_one("heads", "tails"));
+    println!("cash prize: {}", pick_one(500, 1000));
 }
 
 fn is_divisible(n: u32, divisor: u32) -> bool {
@@ -201,4 +204,8 @@ impl Rectangle {
     fn square(width: u32) -> Rectangle {
         Rectangle { width, height: width }
     }
+}
+
+fn pick_one<T>(a: T, b: T) -> T {
+    if std::process::id() % 2 == 0 { a } else { b }
 }
