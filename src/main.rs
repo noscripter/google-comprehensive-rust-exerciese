@@ -148,6 +148,9 @@ fn main() { // fn => function; main => entry point of the whole program
     println!("old area: {}", rect.area());
     rect.inc_width(5);
     println!("new area: {}", rect.area());
+
+    let rect2 = Rectangle::new(8, 8);
+    println!("area of newly created rectangel: {}", rect2.area());
 }
 
 fn is_divisible(n: u32, divisor: u32) -> bool {
@@ -186,5 +189,9 @@ impl Rectangle {
 
     fn inc_width(&mut self, delta: u32) {
         self.width += delta
+    }
+
+    fn new(width: u32, height: u32) -> Rectangle {
+        Rectangle { width, height }
     }
 }
