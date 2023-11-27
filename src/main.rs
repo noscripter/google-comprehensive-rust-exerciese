@@ -101,4 +101,7 @@ fn main() { // fn => function; main => entry point of the whole program
     let arr: [i32; 6] = [10, 20, 30, 40, 50, 60];
     println!("arr: {arr:?}");
     println!("arr: {arr:#?}");
+
+    let s2: &[i32] = &arr[2..4];
+    println!("s2: {s2:?}");
 }
