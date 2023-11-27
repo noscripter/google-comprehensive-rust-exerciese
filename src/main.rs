@@ -65,4 +65,11 @@ fn main() { // fn => function; main => entry point of the whole program
     println!("t.1: {}", t.1);
     println!("{t:?}");
     println!("{t:#?}"); // use '#?' to pretty format the output
+
+    let empty_tuple = (); // this is an empty tuple, and also called an unit type
+                          // consider it void in other programming languages
+                          // it's used to indicate that a function or expression has no return
+                          // value
+    println!("{empty_tuple:?}");
+    println!("{empty_tuple:#?}");
 }
