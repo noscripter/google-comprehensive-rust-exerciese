@@ -96,4 +96,9 @@ fn main() { // fn => function; main => entry point of the whole program
         //ref_y = &y;
     //}
     //println!("ref_y: {ref_y}");
+
+    // slices
+    let arr: [i32; 6] = [10, 20, 30, 40, 50, 60];
+    println!("arr: {arr:?}");
+    println!("arr: {arr:#?}");
 }
