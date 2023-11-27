@@ -157,6 +157,11 @@ fn main() { // fn => function; main => entry point of the whole program
 
     println!("coin toss: {}", pick_one("heads", "tails"));
     println!("cash prize: {}", pick_one(500, 1000));
+
+    let multiply_param1 = 12;
+    let multiply_param2 = 12;
+    let multiply_result: i16 = multiply(multiply_param1, multiply_param2);
+    println!("{multiply_param1} * {multiply_param2} = {}", multiply_result);
 }
 
 fn is_divisible(n: u32, divisor: u32) -> bool {
@@ -208,4 +213,8 @@ impl Rectangle {
 
 fn pick_one<T>(a: T, b: T) -> T {
     if std::process::id() % 2 == 0 { a } else { b }
+}
+
+fn multiply(x: i16, y: i16) -> i16 {
+    x * y
 }
