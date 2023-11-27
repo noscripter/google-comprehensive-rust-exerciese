@@ -44,4 +44,23 @@ fn main() { // fn => function; main => entry point of the whole program
     println!("{x}", x = 1000);
     println!("{x}", x = 123_i64);
     println!("{x}", x = 123);
+
+    // basic syntax: compound types
+    let a = [20, 30, 40];
+    println!("{a:?}");
+
+    let a2 = [0; 3];
+    println!("{a2:?}");
+
+    let a3 = [3; 4];
+    println!("{a3:?}");
+
+    let mut a: [i8; 10] = [42; 10];
+    a[5] = 0;
+    println!("a: {a:?}");
+
+    // showcasing compound types of tuples
+    let t: (i8, bool) = (7, true);
+    println!("t.0: {}", t.0);
+    println!("t.1: {}", t.1);
 }
