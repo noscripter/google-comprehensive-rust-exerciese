@@ -83,4 +83,17 @@ fn main() { // fn => function; main => entry point of the whole program
     println!("x: {}", x); // NOTE: important! This line of print value x can only be used after all the above print
                           // code, otherwise it would leads to compile time error:
                           // cannot borrow `x` as immutable because it is also borrowed as mutable: mutable borrow occurs here
+
+    // dangling references
+    let ref_y: &i32;
+    let y: i32 = 10;
+    ref_y = &y;
+    println!("ref_y: {ref_y}");
+    // dangling references demo
+    //let ref_y: &i32;
+    //{
+        //let y: i32 = 10;
+        //ref_y = &y;
+    //}
+    //println!("ref_y: {ref_y}");
 }
