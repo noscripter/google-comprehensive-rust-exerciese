@@ -63,4 +63,6 @@ fn main() { // fn => function; main => entry point of the whole program
     let t: (i8, bool) = (7, true);
     println!("t.0: {}", t.0);
     println!("t.1: {}", t.1);
+    println!("{t:?}");
+    println!("{t:#?}"); // use '#?' to pretty format the output
 }
