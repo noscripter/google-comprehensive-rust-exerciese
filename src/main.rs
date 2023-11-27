@@ -143,6 +143,11 @@ fn main() { // fn => function; main => entry point of the whole program
 
     // fizzbuzz problem
     print_fizzbuzz_to(20);
+
+    let mut rect = Rectangle { width: 10, height: 5 };
+    println!("old area: {}", rect.area());
+    rect.inc_width(5);
+    println!("new area: {}", rect.area());
 }
 
 fn is_divisible(n: u32, divisor: u32) -> bool {
@@ -166,5 +171,20 @@ fn print_fizzbuzz_to(n: u32) {
     // =n includes the upper bound
     for i in 1..=n {
         println!("{}", fizzbuzz(i));
+    }
+}
+
+struct Rectangle {
+    width: u32,
+    height: u32,
+}
+
+impl Rectangle {
+    fn area(&self) -> u32 {
+        self.width * self.height
+    }
+
+    fn inc_width(&mut self, delta: u32) {
+        self.width += delta
     }
 }
