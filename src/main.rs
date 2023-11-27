@@ -131,4 +131,8 @@ fn main() { // fn => function; main => entry point of the whole program
 
     let string3: &str = &string2[6..];
     println!("string3: {string3}");
+
+    // create string dynamiclly using format! macro
+    let string4 = format!("string3: {}", string3);
+    println!("string4: {string4}");
 }
