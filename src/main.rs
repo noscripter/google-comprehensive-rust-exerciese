@@ -72,4 +72,15 @@ fn main() { // fn => function; main => entry point of the whole program
                           // value
     println!("{empty_tuple:?}");
     println!("{empty_tuple:#?}");
+
+    // references
+    let mut x: i32 = 10;
+    let ref_x: &mut i32 = &mut x;
+    *ref_x = 20;
+    println!("ref_x: {}", *ref_x);
+    let result: u32 = ref_x.count_ones();
+    println!("result = {result}");
+    println!("x: {}", x); // NOTE: important! This line of print value x can only be used after all the above print
+                          // code, otherwise it would leads to compile time error:
+                          // cannot borrow `x` as immutable because it is also borrowed as mutable: mutable borrow occurs here
 }
