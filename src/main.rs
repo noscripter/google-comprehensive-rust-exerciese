@@ -33,4 +33,15 @@ fn main() { // fn => function; main => entry point of the whole program
     println!(r#"<a href="link.html">link</a>"#); // use equal amount of # on either side of the
                                                  // quotes for raw strings
     println!("<a href=\"link.html\">link</a>");
+
+    // below codes are byte strings
+    println!("{:?}", b"abc");
+    println!("{:?}", &[97, 98, 99]);
+
+    // check the value of scalar numbers
+    println!("{x}", x = 1_000);
+    println!("{x}", x = 10_00);
+    println!("{x}", x = 1000);
+    println!("{x}", x = 123_i64);
+    println!("{x}", x = 123);
 }
