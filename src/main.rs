@@ -98,10 +98,11 @@ fn main() { // fn => function; main => entry point of the whole program
     //println!("ref_y: {ref_y}");
 
     // slices
-    let arr: [i32; 6] = [10, 20, 30, 40, 50, 60];
+    let mut arr: [i32; 6] = [10, 20, 30, 40, 50, 60];
     println!("arr: {arr:?}");
     println!("arr: {arr:#?}");
 
+    arr[3] = 3;
     let s2: &[i32] = &arr[2..4];
     println!("s2: {s2:?}");
 }
