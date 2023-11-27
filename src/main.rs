@@ -151,6 +151,9 @@ fn main() { // fn => function; main => entry point of the whole program
 
     let rect2 = Rectangle::new(8, 8);
     println!("area of newly created rectangel: {}", rect2.area());
+
+    let rect3 = Rectangle::square(9);
+    println!("area of square created rectangel: {}", rect3.area());
 }
 
 fn is_divisible(n: u32, divisor: u32) -> bool {
@@ -193,5 +196,9 @@ impl Rectangle {
 
     fn new(width: u32, height: u32) -> Rectangle {
         Rectangle { width, height }
+    }
+
+    fn square(width: u32) -> Rectangle {
+        Rectangle { width, height: width }
     }
 }
