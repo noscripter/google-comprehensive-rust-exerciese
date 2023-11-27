@@ -119,4 +119,16 @@ fn main() { // fn => function; main => entry point of the whole program
     // create slice of the whole array
     let s5: &[i32] = &arr[..];
     println!("s5: {:?}", s5);
+
+    // String vs str
+    let string1: &str = "World";
+    println!("string1: {string1}");
+
+    let mut string2: String = String::from("Hello ");
+    println!("string2: {string2}");
+    string2.push_str(string1);
+    println!("string2: {string2}");
+
+    let string3: &str = &string2[6..];
+    println!("string3: {string3}");
 }
