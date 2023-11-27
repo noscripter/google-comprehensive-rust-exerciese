@@ -105,4 +105,14 @@ fn main() { // fn => function; main => entry point of the whole program
     arr[3] = 3;
     let s2: &[i32] = &arr[2..4];
     println!("s2: {s2:?}");
+
+    // starting index could be omitted
+    let s3: &[i32] = &arr[..4];
+    println!("s3: {s3:?}");
+    println!("s3 equals: {:?}", &arr[0..4]);
+
+    // last index could be omitted too
+    let s4: &[i32] = &arr[2..];
+    println!("s4: {s4:?}");
+    println!("s4 equals: {:?}", &arr[2..arr.len()]);
 }
