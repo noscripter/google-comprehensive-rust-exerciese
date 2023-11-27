@@ -78,8 +78,8 @@ fn main() { // fn => function; main => entry point of the whole program
     let ref_x: &mut i32 = &mut x;
     *ref_x = 20;
     println!("ref_x: {}", *ref_x);
-    let result: u32 = ref_x.count_ones();
-    println!("result = {result}");
+    let ref_x_count_ones: u32 = ref_x.count_ones();
+    println!("ref_x_count_ones = {}", ref_x_count_ones);
     println!("x: {}", x); // NOTE: important! This line of print value x can only be used after all the above print
                           // code, otherwise it would leads to compile time error:
                           // cannot borrow `x` as immutable because it is also borrowed as mutable: mutable borrow occurs here
