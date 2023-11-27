@@ -135,4 +135,9 @@ fn main() { // fn => function; main => entry point of the whole program
     // create string dynamiclly using format! macro
     let string4 = format!("string3: {}", string3);
     println!("string4: {string4}");
+
+    let string5 = String::from("abcdef");
+    let string6: &str = &string5[1..2];
+    println!("string5: {}", string5);
+    println!("string6: {}", string6);
 }
