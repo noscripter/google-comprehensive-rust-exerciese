@@ -115,4 +115,8 @@ fn main() { // fn => function; main => entry point of the whole program
     let s4: &[i32] = &arr[2..];
     println!("s4: {s4:?}");
     println!("s4 equals: {:?}", &arr[2..arr.len()]);
+
+    // create slice of the whole array
+    let s5: &[i32] = &arr[..];
+    println!("s5: {:?}", s5);
 }
