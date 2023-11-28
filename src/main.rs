@@ -266,7 +266,13 @@ fn main() { // fn => function; main => entry point of the whole program
     println!("popped: {:?}", popped);
 
     // for expression
-    //let v = vec![10, 20, 30];
+    let v = vec![10, 20, 30];
+    for x in v {
+        println!("x: {x}");
+    }
+    for i in (0..10).step_by(2) {
+        println!("i: {i}");
+    }
 }
 
 fn double(x: i32) -> i32 {
