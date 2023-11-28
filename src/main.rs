@@ -261,8 +261,9 @@ fn main() { // fn => function; main => entry point of the whole program
     }
     println!();
 
+    // borrow of moved value
     //let popped = numbers.pop();
-    //println!("poped: {:?}", popped);
+    //println!("popped: {:?}", popped);
 
     // for expression
     //let v = vec![10, 20, 30];
