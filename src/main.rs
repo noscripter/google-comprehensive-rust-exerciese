@@ -256,14 +256,14 @@ fn main() { // fn => function; main => entry point of the whole program
     println!("accessing numbers: index 0 {}", numbers[0]);
     println!("accessing numbers: index 1 {}", numbers[1]);
 
-    for n in numbers {
+    for n in &numbers {
         print!(" {}", n);
     }
     println!();
 
     // borrow of moved value
-    //let popped = numbers.pop();
-    //println!("popped: {:?}", popped);
+    let popped = numbers.pop();
+    println!("popped: {:?}", popped);
 
     // for expression
     //let v = vec![10, 20, 30];
