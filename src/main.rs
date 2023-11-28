@@ -217,7 +217,7 @@ fn main() { // fn => function; main => entry point of the whole program
                 3 + 4
             };
             println!("w: {w}");
-            y * w
+            y * w // NOTE: no ending ; otherwise the return value would be () unit type
         };
         println!("z: {z}");
         z - y
