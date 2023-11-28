@@ -223,6 +223,15 @@ fn main() { // fn => function; main => entry point of the whole program
         z - y
     };
     println!("x: {x}");
+
+    // double function demo starts here =->
+    let double_result = double(3);
+    println!("{double_result}");
+    // <== double function demo ends here
+}
+
+fn double(x: i32) -> i32 {
+    x + x
 }
 
 fn transpose(matrix: [[i32; 3]; 3]) -> [[i32; 3]; 3] {
