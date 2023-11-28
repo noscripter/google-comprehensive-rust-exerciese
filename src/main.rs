@@ -162,6 +162,72 @@ fn main() { // fn => function; main => entry point of the whole program
     let multiply_param2 = 12;
     let multiply_result: i16 = multiply(multiply_param1, multiply_param2);
     println!("{multiply_param1} * {multiply_param2} = {}", multiply_result);
+
+    let convert1: i8 = 1;
+    let convert2: i16 = 1;
+    println!("{}, {}", convert1, convert2);
+
+    // implicit convertion in rust demo starts
+
+    // this would fail
+    //convert2 = convert1;
+    //println!("after converting {}, {}", convert1, convert2);
+
+    //convert1 = convert2;
+    //println!("after converting {}, {}", convert1, convert2);
+    // implicit convertion in rust demo ends
+
+    let array = [10, 20, 30];
+    println!("array: {:?}", array);
+    println!("array: {array:?}");
+    println!("array: {:#?}", array);
+    println!("array: {array:#?}");
+
+    println!("Iterating over array:");
+    for n in &array {
+        print!(" {n}");
+    }
+    println!();
+
+    println!("Iterating over range:");
+    for i in 0..3 {
+        print!(" {}", array[i]);
+    }
+    println!();
+
+    let matrix = [
+        [101, 102, 103],
+        [201, 202, 203],
+        [301, 302, 303]
+    ];
+    println!("matrix:");
+    pretty_print(&matrix);
+
+    let transposed = transpose(matrix);
+    println!("transposed:");
+    pretty_print(&transposed);
+}
+
+fn transpose(matrix: [[i32; 3]; 3]) -> [[i32; 3]; 3] {
+    let mut result = [[0; 3]; 3];
+
+    for i in 0..3 {
+        for j in 0..3 {
+            result[i][j] = matrix[j][i]
+        }
+    }
+    //result // equals to return result;
+    return result;
+}
+
+fn pretty_print(matrix: &[[i32; 3]; 3]) {
+    for n in matrix {
+        for m in n {
+            print!(" {}", m);
+        }
+        println!();
+    }
+    println!();
 }
 
 fn is_divisible(n: u32, divisor: u32) -> bool {
