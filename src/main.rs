@@ -206,6 +206,23 @@ fn main() { // fn => function; main => entry point of the whole program
     let transposed = transpose(matrix);
     println!("transposed:");
     pretty_print(&transposed);
+
+    // block
+    println!("blocks:");
+    let x = {
+        let y = 10;
+        println!("y: {y}");
+        let z = {
+            let w = {
+                3 + 4
+            };
+            println!("w: {w}");
+            y * w
+        };
+        println!("z: {z}");
+        z - y
+    };
+    println!("x: {x}");
 }
 
 fn transpose(matrix: [[i32; 3]; 3]) -> [[i32; 3]; 3] {
