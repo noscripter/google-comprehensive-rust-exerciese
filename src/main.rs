@@ -228,6 +228,22 @@ fn main() { // fn => function; main => entry point of the whole program
     let double_result = double(3);
     println!("{double_result}");
     // <== double function demo ends here
+
+    let mut x = 10;
+    if x % 2 == 0 { // if statement
+        x = x / 2;
+    } else {
+        x = 3 * x + 1;
+    }
+    println!("x: {x}");
+
+    let mut x = 10;
+    x = if x % 2 == 0 { // use if as expression
+        x / 2
+    } else {
+        3 * x + 1
+    };
+    println!("x: {x}");
 }
 
 fn double(x: i32) -> i32 {
