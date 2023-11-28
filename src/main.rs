@@ -244,6 +244,28 @@ fn main() { // fn => function; main => entry point of the whole program
         3 * x + 1
     };
     println!("x: {x}");
+
+    // demo of Vec and vec! macro
+    let mut numbers: Vec<i32> = vec![1, 2, 3, 4, 5];
+    println!("numbers: {numbers:?}");
+    println!("numbers: {numbers:#?}"); // pretty format print
+
+    numbers.push(6);
+    println!("after pushing numbers: {numbers:?}");
+    println!("after pushing numbers: {numbers:#?}"); // pretty format print
+    println!("accessing numbers: index 0 {}", numbers[0]);
+    println!("accessing numbers: index 1 {}", numbers[1]);
+
+    for n in numbers {
+        print!(" {}", n);
+    }
+    println!();
+
+    //let popped = numbers.pop();
+    //println!("poped: {:?}", popped);
+
+    // for expression
+    //let v = vec![10, 20, 30];
 }
 
 fn double(x: i32) -> i32 {
